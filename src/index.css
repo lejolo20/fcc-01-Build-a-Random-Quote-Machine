@@ -57,20 +57,11 @@ body {
   font-weight: 700;
   color: #ffffff9c;
 }
-
 #tweet-quote {
   grid-area: tweet;
 }
 
-#tweet-quote > a {
-  text-decoration: none;
-  color: white;
-}
-
-#new-quote {
-  grid-area: new-quote;
-}
-
+#tweet-quote,
 button {
   border: none;
   background-color: #8d601daf;
@@ -80,6 +71,15 @@ button {
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#new-quote {
+  grid-area: new-quote;
 }
 
 span {

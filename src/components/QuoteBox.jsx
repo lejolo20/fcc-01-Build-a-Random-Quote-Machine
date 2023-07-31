@@ -33,9 +33,11 @@ const QuoteBox = () => {
         <main id="quote-box">
           {<p id="text">"{loading ? "" : apiData?.["0"].quote}"</p>}
           <div id="author">- {loading ? "" : apiData?.["0"].author} -</div>
-          <button id="tweet-quote">
-            <a href="twitter.com/intent/tweet">Twitter</a>
-          </button>
+
+          <a id="tweet-quote" href="twitter.com/intent/tweet">
+            Twitter
+          </a>
+
           <button id="new-quote" onClick={fecthApi}>
             New Quote
           </button>
