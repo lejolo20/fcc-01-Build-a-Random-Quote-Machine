@@ -1,0 +1,122 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #946767cc;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#quote-box {
+  display: grid;
+  grid-template-areas:
+    ". . . . ."
+    ". quote quote quote ."
+    ". . . author ."
+    ". tweet . new-quote ."
+    ". . . . .";
+  background-color: #c9913cf6;
+  height: auto;
+  width: 50vw;
+  gap: 1rem;
+  border-radius: 1rem;
+  animation: main 1s;
+}
+
+#text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  top: 0;
+  margin: 0;
+  grid-area: quote;
+}
+
+#author {
+  right: 0;
+  bottom: 20%;
+  grid-area: author;
+  font-weight: 700;
+  color: #ffffff9c;
+}
+
+#tweet-quote {
+  grid-area: tweet;
+}
+
+#tweet-quote > a {
+  text-decoration: none;
+  color: white;
+}
+
+#new-quote {
+  grid-area: new-quote;
+}
+
+button {
+  border: none;
+  background-color: #8d601daf;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+span {
+  font-size: small;
+  color: #ffffffb2;
+}
+
+.loading {
+  font-size: large;
+  font-weight: 900;
+  animation: loader linear 2s infinite;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes main {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
