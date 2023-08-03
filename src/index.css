@@ -36,7 +36,8 @@ body {
     ". . . . .";
   background-color: #c9913cf6;
   height: auto;
-  width: 50vw;
+  width: 60vw;
+  max-width: 600px;
   gap: 1rem;
   border-radius: 1rem;
   animation: main 1s;
@@ -118,5 +119,56 @@ span {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media (max-width: 500px) {
+  #quote-box {
+    display: grid;
+    grid-template-areas:
+      ". . . . ."
+      ". quote quote quote ."
+      ". author author author ."
+      ". . new-quote .  ."
+      ". . tweet . .";
+    width: 80vw;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    animation: main 1s;
+  }
+
+  #text {
+    font-size: 1rem;
+  }
+
+  #author {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  #tweet-quote {
+    margin-bottom: 0.8rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 200px) {
+  #quote-box {
+    width: 90vw;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    animation: main 1s;
+  }
+
+  #text {
+    font-size: 0.75rem;
+  }
+
+  #author {
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+  #tweet-quote {
+    margin-bottom: 0.75rem;
+    font-size: 0.6rem;
   }
 }

@@ -4,6 +4,8 @@ const QuoteBox = () => {
   const [apiData, setApiData] = useState();
   const [loading, setLoading] = useState(false);
 
+  console.log(import.meta.env.API_KEY);
+
   const fecthApi = async () => {
     setLoading(true);
     const data = await fetch(
